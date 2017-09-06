@@ -1,3 +1,4 @@
+import { App_Routing } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PortafolioComponent } from './components/portafolio/portafolio.component';
 import { AboutComponent } from './components/about/about.component';
 import { PortafolioItemComponent } from './components/portafolio-item/portafolio-item.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { PortafolioItemComponent } from './components/portafolio-item/portafolio
     PortafolioItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    App_Routing
   ],
   providers: [],
   bootstrap: [AppComponent]
