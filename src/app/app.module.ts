@@ -1,5 +1,3 @@
-import { PortafolioGaleriaComponent } from './components/portafolio/portafolioGaleria.component';
-import { ProductoComponent } from './components/portafolio-item/producto.component';
 
 import { HttpModule } from '@angular/http';
 import { App_Routing } from './app.routing';
@@ -29,9 +27,7 @@ import { ProductosService } from './services/productos.service';
     PortafolioComponent,
     AboutComponent,
     PortafolioItemComponent,
-    SearchComponent,
-    ProductoComponent,
-    PortafolioGaleriaComponent
+    SearchComponent
   ],
   imports: [
     BrowserModule,

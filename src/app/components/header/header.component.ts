@@ -14,7 +14,7 @@ export class HeaderComponent {
 
   buscarProducto(termino: string) {
 
-    console.log(termino);
+    // console.log(termino);
     if (termino.length > 0 ) {
       this._rt.navigate(['buscar', termino]);
     }
