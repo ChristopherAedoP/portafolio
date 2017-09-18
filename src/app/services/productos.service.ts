@@ -24,10 +24,16 @@ export class ProductosService {
               'https://portafolio-1f681.firebaseio.com/productos_idx.json'
             )
             .subscribe(res => {
-               console.log(res.json());
-              // this.cargada_sobre_nosotros = true;
-              // this.productos = res.json();
-              this.cargando_productos = false;
+              //  console.log(res.json());
+
+                     this.productos = res.json();
+                     this.cargando_productos = false;
+
+              // setTimeout(() => {
+              //                  this.productos = res.json();
+              //                  this.cargando_productos = false;
+              // }, 1500);
+
             });
 
     }
