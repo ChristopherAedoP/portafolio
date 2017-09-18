@@ -15,6 +15,7 @@ import { PortafolioItemComponent } from './components/portafolio-item/portafolio
 
 // servicios
 import { InformacionService } from './services/informacion.service';
+import { ProductosService } from './services/productos.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { InformacionService } from './services/informacion.service';
     App_Routing
   ],
   providers: [
-    InformacionService
+    InformacionService,
+    ProductosService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,21 @@
+{
+  "equipo" : [ {
+    "frase" : "me gusta programar",
+    "nombre" : "christopher aedo",
+    "subtitulo" : "programador",
+    "twitter" : "@christopheraedo",
+    "url" : "https://firebasestorage.googleapis.com/v0/b/portafolio-1f681.appspot.com/o/team-3.jpg?alt=media&token=b0d89e12-722f-4c1f-baeb-3027feec14a2"
+  }, {
+    "frase" : "na no desu!",
+    "nombre" : "cony",
+    "subtitulo" : "profe",
+    "twitter" : "@cony",
+    "url" : "https://firebasestorage.googleapis.com/v0/b/portafolio-1f681.appspot.com/o/team-2.jpg?alt=media&token=5e7333a1-f73d-47b7-b60f-83fe45198b9d"
+  }, {
+    "frase" : "miuuu",
+    "nombre" : "shirongo",
+    "subtitulo" : "cornetita",
+    "twitter" : "@gatroncho",
+    "url" : "https://firebasestorage.googleapis.com/v0/b/portafolio-1f681.appspot.com/o/team-1.jpg?alt=media&token=bddb528e-635e-4160-8644-34fdf1fa0f4a"
+  } ]
+}

@@ -7,8 +7,10 @@ import { Injectable } from '@angular/core';
 export class InformacionService {
 
   info: any = {} ;
-  sobre_nosotro: any = {} ;
-  cargada: boolean = false;
+  equipo: any[] = [] ;
+  cargada = false;
+  cargada_sobre_nosotros = false;
+
 
   constructor( public http: Http) {
     this.carga_info();
@@ -18,7 +20,7 @@ export class InformacionService {
   public carga_info() {
     this.http.get('./../../assets/data/info.pagina.json')
     .subscribe( data => {
-      console.log(data.json());
+      // console.log(data.json());
       this.cargada = true;
       this.info = data.json();
     });
@@ -27,9 +29,9 @@ export class InformacionService {
   public carga_sobre_nosotros() {
     this.http.get('https://portafolio-1f681.firebaseio.com/equipo.json')
     .subscribe( data => {
-      console.log(data.json());
-      this.cargada = true;
-      this.sobre_nosotro = data.json();
+      // console.log(data.json());
+      this.cargada_sobre_nosotros = true;
+      this.equipo = data.json();
     });
   }
 }
