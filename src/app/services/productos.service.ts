@@ -13,13 +13,16 @@ export class ProductosService {
   }
 
   public busca_producto(termino: string) {
+    this.cargando_productos = true;
     if (this.productos.length === 0) {
       this.cargar_productos().then(() => {
         // termino carga
         this.filtrar_productos(termino);
+         this.cargando_productos = false;
       });
     }else {
         this.filtrar_productos(termino);
+        this.cargando_productos = false;
     }
 
 
