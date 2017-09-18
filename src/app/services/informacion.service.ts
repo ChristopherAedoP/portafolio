@@ -18,8 +18,7 @@ export class InformacionService {
    }
 
   public carga_info() {
-    this.http.get('./../../assets/data/info.pagina.json')
-    .subscribe( data => {
+    this.http.get('assets/data/info.pagina.json').subscribe(data => {
       // console.log(data.json());
       this.cargada = true;
       this.info = data.json();
