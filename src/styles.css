@@ -41,3 +41,81 @@ svg path,
 svg rect {
   fill: black;
 }
+
+.list-group-item.active {
+  z-index: 2;
+  color: #111;
+  background-color: #e9ecef;
+  border-color: 1px solid rgba(0,0,0,.125) !important;
+  text-decoration: none;
+}
+
+.item-inside__meta .rk-portfolio-title,
+.item-inside__meta .rk-portfolio-category {
+  text-shadow: 1px 0 0 #fff,
+  -1px 0 0 #fff,
+  0 1px 0 #fff,
+  0 -1px 0 #fff,
+  1px 1px #fff,
+  -1px -1px 0 #fff,
+  1px -1px 0 #fff,
+  -1px 1px 0 #fff;
+
+
+}
+.carousel-item {
+  width: 100%;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@media (max-width: 600px) {
+  .carousel-item {
+    height: 280px;
+  }
+}
+
+.item-inside-1 {
+
+background:   no-repeat center cover !important;
+background-size:100% auto !important;
+background-position: center !important;
+background-size: 100% !important;
+
+
+
+
+}
+
+.rk-portfolio-cover {
+  height: 450px !important;
+
+}
+.curso-banner {
+  max-width: 100%;
+}
+  .centered-bottom {
+
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container-img-principal {
+  position: relative;
+  text-align: center;
+  color:black;
+    text-shadow: 1px 0 0 #fff,
+    -1px 0 0 #fff,
+    0 1px 0 #fff,
+    0 -1px 0 #fff,
+    1px 1px #fff,
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff;
+
+}
+

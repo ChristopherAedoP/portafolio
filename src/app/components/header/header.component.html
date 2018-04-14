@@ -1,6 +1,6 @@
 <header class="ae-container-fluid ae-container-fluid--full rk-header ">
-    <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
-    <label for="mobile-menu">
+  <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+  <label for="mobile-menu">
     <svg>
       <use xlink:href="assets/img/symbols.svg#bar"></use>
     </svg>
@@ -11,26 +11,39 @@
       <use xlink:href="assets/img/symbols.svg#bar"></use>
     </svg>
   </label>
-    <div class="ae-container-fluid rk-topbar">
-        <h1 class="rk-logo"><a [routerLink]="['']"> {{ _is.info.titulo }} <sup>tm</sup></a></h1>
-        <nav class="rk-navigation">
-            <ul class="rk-menu">
-                <li class="rk-menu__item" routerLinkActive="active"><a [routerLink]="['home']" class="rk-menu__link">Home</a>
-                </li>
-                <li class="rk-menu__item" routerLinkActive="active"><a [routerLink]="['about']" class="rk-menu__link">Sobre nosotros</a>
-                </li>
-            </ul>
-            <div class="rk-search">
-                <input  name="buscar"
-                        #buscarTexto
-                        (keyup.enter)="buscarProducto( buscarTexto.value )"
-                        type="text" placeholder="Buscar.." id="urku-search" class="rk-search-field">
-                <label for="urku-search">
-                <svg>
-                  <use xlink:href="assets/img/symbols.svg#icon-search"></use>
-                </svg>
-              </label>
-            </div>
-        </nav>
-    </div>
+  <div class="ae-container-fluid rk-topbar">
+    <h1 class="rk-logo">
+      <a [routerLink]="['']"> {{ _is.info.titulo }}
+        <sup>tm</sup>
+      </a>
+    </h1>
+    <nav class="rk-navigation">
+      <ul class="rk-menu">
+        <li class="rk-menu__item" routerLinkActive="active">
+          <a [routerLink]="['home']" class="rk-menu__link">Home</a>
+        </li>
+        <!-- <li class="rk-menu__item" routerLinkActive="active">
+          <a [routerLink]="['productos']" class="rk-menu__link">Productos</a>
+        </li> -->
+        <li class="rk-menu__item" routerLinkActive="active">
+          <a [routerLink]="['proyectos']" class="rk-menu__link">Proyectos</a>
+        </li>
+        <li class="rk-menu__item" routerLinkActive="active">
+          <a [routerLink]="['about']" class="rk-menu__link">Sobre nosotros</a>
+        </li>
+        <li class="rk-menu__item" routerLinkActive="active">
+          <a [routerLink]="['/admin-panel']" class="rk-menu__link">admin</a>
+        </li>
+      </ul>
+      <div class="rk-search">
+        <input name="buscar" #buscarTexto (keyup.enter)="buscarProducto( buscarTexto.value )" type="text" placeholder="Buscar.."
+          id="urku-search" class="rk-search-field">
+        <label for="urku-search">
+          <svg>
+            <use xlink:href="assets/img/symbols.svg#icon-search"></use>
+          </svg>
+        </label>
+      </div>
+    </nav>
+  </div>
 </header>

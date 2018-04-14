@@ -1,9 +1,9 @@
-/* * * * * * * * * * * * * * * * * * * * *\ 
- aurora-themes v1.0.0 
- Themes for Aurora Kit 
- (c) 2015 Lionel T <elrumordelaluz@hotmail.com> (http://elrumordelaluz.com) 
- https://github.com/aurora-kit/aurora-themes.git 
- Licensed under  MIT 
+/* * * * * * * * * * * * * * * * * * * * *\
+ aurora-themes v1.0.0
+ Themes for Aurora Kit
+ (c) 2015 Lionel T <elrumordelaluz@hotmail.com> (http://elrumordelaluz.com)
+ https://github.com/aurora-kit/aurora-themes.git
+ Licensed under  MIT
 \* * * * * * * * * * * * * * * * * * * * */
 @font-face {
   font-family: "Aileron";
@@ -77,11 +77,11 @@ input[type="url"],
 input[type="week"],
 textarea {
   background: #f6f6f6;
-  border: 0;
+  border: 1px;
   font-size: inherit;
   letter-spacing: .04em;
   margin-bottom: .5rem;
-  padding: 2.2rem 3rem;
+  /* padding: 2.2rem 3rem; */
 }
 input[type="text"]:focus,
 input[type="date"]:focus,
@@ -97,6 +97,12 @@ input[type="time"]:focus,
 input[type="url"]:focus,
 input[type="week"]:focus,
 textarea:focus {
+  outline: 0;
+}
+.form-control:focus {
+  /* color: #c7c8c9; */
+  background-color: #dfdfdf  !important;
+  border-color: #9a9b9c;
   outline: 0;
 }
 

@@ -1,0 +1,119 @@
+<!-- <h3> {{ title }}  </h3> -->
+
+<!-- <div *ngIf="mensaje" [ngClass]="{'alert-success': status ,'alert-danger': !status }" class="alert alert-success" role="alert">
+  {{mensaje}}
+</div> -->
+
+
+<h4>{{ title }}</h4>
+<hr>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="datos-tab" data-toggle="tab" href="#datos" role="tab" aria-controls="datos" aria-expanded="true">Datos</a>
+  </li>
+  <li class="nav-item">
+  <a *ngIf="is_edit" class="nav-link" id="imagenes-tab" data-toggle="tab" href="#imagenes" role="tab" aria-controls="imagenes">Imagenes</a>
+
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="datos" role="tabpanel" aria-labelledby="datos-tab">
+
+
+    <form #ProyectoForm="ngForm" (ngSubmit)="onSubmit(ProyectoForm)" role="form" [@fadeLateral] *ngIf="proyecto">
+
+      <div class="form-group">
+        <label for="">Nombre</label>
+        <input name="name" #name="ngModel" [(ngModel)]="proyecto.name" type="text" class="form-control" placeholder="Ingrese Nombre..."
+          required>
+        <span class="text-danger" *ngIf="!name.valid && name.touched">
+          El Nombre es obligatorio.
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="">Categoria</label>
+        <input name="category" #category="ngModel" [(ngModel)]="proyecto.category" type="text" class="form-control" placeholder="Ingrese categoria..."
+          required>
+        <span class="text-danger" *ngIf="!category.valid && category.touched">
+          La categoria es obligatorio
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="">Sub-Titulo</label>
+        <input name="subtitle" #subtitle="ngModel" [(ngModel)]="proyecto.subtitle" type="text" class="form-control" placeholder="Ingrese subtitulo..."
+          required>
+        <span class="text-danger" *ngIf="!subtitle.valid && subtitle.touched">
+          El subtitulo es obligatorio.
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="">Descripción</label>
+        <textarea name="description" #description="ngModel" [(ngModel)]="proyecto.description" type="text" class="form-control" placeholder="Ingrese descripción..."
+          required></textarea>
+        <span class="text-danger" *ngIf="!description.valid && description.touched">
+          La descripcion es obligatoria
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="">Segundo Sub-Titulo</label>
+        <input name="subtitle2" #subtitle2="ngModel" [(ngModel)]="proyecto.subtitle2" type="text" class="form-control" placeholder="Ingrese segundo subtitulo...">
+
+      </div>
+      <div class="form-group">
+        <label for="">Segunda Descripción</label>
+        <textarea name="description2" #description2="ngModel" [(ngModel)]="proyecto.description2" type="text" class="form-control"
+          placeholder="Ingrese segundo descripción..."></textarea>
+
+      </div>
+      <div class="form-group">
+        <label for="">Resumen</label>
+        <textarea name="summary" #summary="ngModel" [(ngModel)]="proyecto.summary" type="text" class="form-control" placeholder="Ingrese resumen..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="">URL Demo</label>
+        <input name="url_demo" #url_demo="ngModel" [(ngModel)]="proyecto.url_demo" type="text" class="form-control" placeholder="Ingrese URL demo...">
+
+      </div>
+      <div class="form-group">
+        <label for="">URL Git</label>
+        <input name="url_git" #url_git="ngModel" [(ngModel)]="proyecto.url_git" type="text" class="form-control" placeholder="Ingrese URL git...">
+      </div>
+
+
+      <input [disabled]="!ProyectoForm.form.valid" type="submit" class="btn btn-success" value="{{title}}" />
+
+      <button [disabled]="!ProyectoForm.form.valid && grabando" type="submit" class="btn btn-primary">
+        <i [ngClass]="{ 'fa-save': !grabando , 'fa-refresh fa-spin': grabando }" class="fa"></i>
+        <span *ngIf="!grabando"> Guardar Cambios</span>
+        <span *ngIf="grabando"> Espere Porfavor..</span>
+      </button>
+
+    </form>
+  </div>
+  <div class="tab-pane fade" id="imagenes" role="tabpanel" aria-labelledby="imagenes-tab">
+    <div class="form-group">
+      <div class="image_for_edit" *ngIf="is_edit && proyecto?.url_imgPrincipal && proyecto?.url_imgPrincipal !=null">
+        <img src="{{proyecto?.url_imgPrincipal}}" class="img-rounded img-responsive " />
+      </div>
+      <label for="file">Imagen Principal</label>
+      <input (change)="fileChangeEvent($event,'imgPrincipal')" type="file" name="imgPrincipal" placeholder="Subir Imagen Principal">
+    </div>
+    <div class="form-group">
+      <div class="image_for_edit" *ngIf="is_edit && proyecto?.url_imgPrimera && proyecto?.url_imgPrimera !=null">
+
+        <img src="{{proyecto?.url_imgPrimera}}" class="img-rounded img-responsive " />
+
+      </div>
+      <label for="file">Primera Imagen</label>
+      <input (change)="fileChangeEvent($event,'imgPrimera')" type="file" name="imgPrimera" placeholder="Subir Primera Imagen">
+    </div>
+    <div class="form-group">
+      <div class="image_for_edit" *ngIf="is_edit && proyecto?.url_imgSegunda && proyecto?.url_imgSegunda !=null">
+        <img src="{{proyecto?.url_imgSegunda}}" class="img-rounded img-responsive " />
+      </div>
+      <label for="file">Segunda Imagen</label>
+      <input (change)="fileChangeEvent($event,'imgSegunda')" type="file" name="imgSegunda" placeholder="Subir Segunda Imagen">
+    </div>
+  </div>
+</div>

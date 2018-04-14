@@ -1,3 +1,6 @@
+import { ProyectoComponent } from './components/proyecto/proyecto.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { ProductosComponent } from './components/productos/productos.component';
 
 import { Routes, RouterModule } from '@angular/router';
 import {
@@ -12,7 +15,9 @@ const app_routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'item/:id', component: PortafolioItemComponent },
   { path: 'buscar/:termino', component: SearchComponent },
-
+  { path: 'productos', component: ProductosComponent },
+  { path: 'proyectos', component: ProyectosComponent },
+  { path: 'proyecto/:id', component: ProyectoComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
